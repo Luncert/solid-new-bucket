@@ -28,7 +28,7 @@ export type Comparator<T> = (a: T, b: T) => -1 | 0 | 1
 
 export type ObjectIndex = string | number
 
-interface Mapper<A, B> {
+export interface Mapper<A, B> {
   to?(a: A): B;
   from?(b: B): A;
 }
@@ -46,4 +46,9 @@ interface StampedBucketAction<T> {
   map<O>(call: (v: T) => O): O
   markChanged(): void
   reset(v: T): void
+}
+
+export interface StampedData<T> {
+  data: T
+  timestamp: number
 }

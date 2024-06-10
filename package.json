@@ -1,6 +1,6 @@
 {
   "name": "solid-new-bucket",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Better Signal API for SolidJS",
   "scripts": {
     "start": "vite",

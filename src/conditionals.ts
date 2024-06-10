@@ -1,3 +1,4 @@
+import { Supplier } from "."
 
 /**
  * Invoke function or return value if condition is true.

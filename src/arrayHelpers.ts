@@ -1,3 +1,4 @@
+import { Func } from ".";
 
 /**
  * Filter out and remove elements from array.

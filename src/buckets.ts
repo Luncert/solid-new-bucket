@@ -1,4 +1,5 @@
 import { createSignal, Accessor, createMemo, SignalOptions, splitProps } from "solid-js"
+import { Bucket, Mapper, ObjectIndex, StampedBucket, StampedData } from ".";
 
 
 /**
