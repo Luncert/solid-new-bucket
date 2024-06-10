@@ -1,4 +1,5 @@
-import { createSignal, Accessor, createMemo, SignalOptions, splitProps } from "solid-js";
+import { createSignal, Accessor, createMemo, SignalOptions, splitProps } from "solid-js"
+
 
 /**
  * Stamped Bucket help to trigger rerendering after updating object without recreate new object.
