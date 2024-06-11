@@ -1,6 +1,6 @@
 {
   "name": "solid-new-bucket",
-  "version": "0.0.4-a",
+  "version": "0.0.4-b",
   "description": "Better Signal API for SolidJS",
   "scripts": {
     "start": "vite",
@@ -16,8 +16,13 @@
       "dist"
   ],
   "repository": {
-    "url": "https://github.com/Luncert/solid-new-bucket"
+    "type": "git",
+    "url": "git+https://github.com/Luncert/solid-new-bucket.git"
   },
+  "keywords": [
+    "SolidJS",
+    "Signal"
+  ],
   "devDependencies": {
     "solid-devtools": "^0.27.3",
     "tsup": "^8.1.0",
