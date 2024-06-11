@@ -21,7 +21,9 @@
   },
   "keywords": [
     "SolidJS",
-    "Signal"
+    "Signal",
+    "Store",
+    "Utils"
   ],
   "devDependencies": {
     "solid-devtools": "^0.27.3",

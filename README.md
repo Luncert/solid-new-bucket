@@ -1,4 +1,4 @@
-# solid-bucket
+# solid-new-bucket
 SolidJS Signal Utils
 
 ## Usage
