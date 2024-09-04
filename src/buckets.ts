@@ -51,24 +51,28 @@ export function stampedBucket<T>(value: T, options?: {
       options?.afterUpdate?.(value)
     }
 
-    // add mapper function
-    (call as any).map = <O>(mapper: (v: T) => O) => {
-      return mapper(v().data);
-    }
-
-    // add markChanged function
-    (call as any).markChanged = () => {
-      setTimestamp(new Date().getTime())
-    }
-
-    (call as any).reset = (v: T) => {
-      setV(v)
-    }
-
     return v().data
   }
 
-  return call as any
+  const callObj = Object.create(call, {
+    map: {
+      value: <O>(mapper: (v: T) => O) => {
+        return mapper(v().data);
+      }
+    },
+    markChanged: {
+      value: () => {
+        setTimestamp(new Date().getTime())
+      }
+    },
+    reset: {
+      value: (v: T) => {
+        setV(v)
+      }
+    }
+  })
+
+  return callObj
 }
 
 function getFieldOfObject(o: any, paths: ObjectIndex[]) {
