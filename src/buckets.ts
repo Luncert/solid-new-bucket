@@ -29,11 +29,9 @@ export function stampedBucket<T>(value: T, options?: {
       }
     };
   });
-  const setV = (newValue?: T) => {
-    if (newValue) {
-      value = newValue
-    }
-    setTimestamp(new Date().getTime())
+  const setV = (newValue: T) => {
+    value = newValue;
+    setTimestamp(new Date().getTime());
   };
 
   const call = function(updater?: (v: T) => void) {
@@ -46,7 +44,9 @@ export function stampedBucket<T>(value: T, options?: {
       if (options?.localStorageName) {
         localStorage.setItem(options.localStorageName, value ? JSON.stringify(value) : "")
       }
-      setV();
+
+      // mark changed
+      setTimestamp(new Date().getTime());
   
       options?.afterUpdate?.(value)
     }
