@@ -36,15 +36,37 @@ export interface Mapper<A, B> {
 export type Bucket<T> = {
   // (v?: T): T;
   // (v: (prev: T) => T): T;
+  /**
+   * Update.
+   *  @param v: value
+   */
   <U extends T>(v?: T): U;
+
+  /**
+   * Update with updater.
+   *  @param v: updater
+   */
   <U extends T>(v: (prev: T) => U): U;
 }
 
 export type StampedBucket<T> = ((updater?: Consumer<T>) => T) & StampedBucketAction<T>;
 
 interface StampedBucketAction<T> {
+  /**
+   * Provide mapper to map content to needed type.
+   * @param call mapper
+   */
   map<O>(call: (v: T) => O): O
+
+  /**
+   * Mark content is changed.
+   */
   markChanged(): void
+
+  /**
+   * Set content to.
+   * @param v 
+   */
   reset(v: T): void
 }
 
