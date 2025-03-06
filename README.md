@@ -1,9 +1,12 @@
 # solid-new-bucket
-SolidJS Signal Utils
 
-## Usage
+[中文文档](#中文文档)
 
-### Bucket
+SolidJS Signal Utils Lib.
+
+### Usage
+
+#### Bucket
 
 Create a bucket to track data:
 ```
@@ -70,7 +73,7 @@ console.log(value())
 // expected to be: 'new data'
 ```
 
-### StampedBucket
+#### StampedBucket
 
 StampedBucket helps to track changes on Object, Array and other complex types.
 
@@ -112,11 +115,13 @@ StampedBucket supports update listener and localStorage sync as well as Bucket.
 
 ---
 
+## 中文文档
+
 SolidJS状态管理API。
 
-## 用法
+### 用法
 
-### Bucket
+#### Bucket
 
 创建一个 bucket 来管理数据：
 ```
